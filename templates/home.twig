@@ -1,0 +1,7 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    {% for image in post.get_field('gallery') %}
+        <img src="{{ TimberImage(image).src }}">
+    {% endfor %}
+{% endblock content %}
