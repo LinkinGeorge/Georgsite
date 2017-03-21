@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    {% if post.get_children %}
+        <ul class="locations">
+            {% for child in post.get_children %}
+                <li><img src="{{ child.thumbnail.src }}"></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock content %}
