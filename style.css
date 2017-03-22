@@ -3,3 +3,8 @@
  * Description: A theme to display my photographs
  * Author: Upstatement and Georg Donner!
 */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}

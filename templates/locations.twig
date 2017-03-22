@@ -1,11 +1,53 @@
 {% extends "base.twig" %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{site.theme.link}}/css/shape-hover.css" type="text/css"/>
+    <script src="{{site.theme.link}}/js/snap.svg-min.js"></script>
+    <script src="{{site.theme.link}}/js/hovers.js"></script>
+{% endblock %}
+
 {% block content %}
     {% if post.get_children %}
-        <ul class="locations">
+        <section id="grid" class="grid clearfix">
             {% for child in post.get_children %}
-                <li><img src="{{ child.thumbnail.src }}"></li>
+                <a href="{{ child.link }}" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+                    <figure>
+                        <img src="{{ child.thumbnail.src }}" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                        <figcaption>
+                            <h2>{{ child.title }}</h2>
+                            <p>{{ child.content }}</p>
+                            <button>View</button>
+                        </figcaption>
+                    </figure>
+                </a>
             {% endfor %}
-        </ul>
+        </section>
     {% endif %}
 {% endblock content %}
+
+{% block end %}
+    <script>
+        (function() {
+            function init() {
+                var speed = 250,
+                    easing = mina.easeinout;
+                [].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+                var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+                    pathConfig = {
+                        from : path.attr( 'd' ),
+                        to : el.getAttribute( 'data-path-hover' )
+                    };
+                    el.addEventListener( 'mouseenter', function() {
+                        path.animate( { 'path' : pathConfig.to }, speed, easing );
+                    } );
+                    el.addEventListener( 'mouseleave', function() {
+                        path.animate( { 'path' : pathConfig.from }, speed, easing );
+                    } );
+                } );
+            }
+            init();
+        })();
+        
+    </script>
+{% endblock %}
