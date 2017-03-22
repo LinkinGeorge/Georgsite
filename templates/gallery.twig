@@ -1,28 +1,33 @@
 {% extends "base.twig" %}
 
+{% block head %}
+    <script type="text/javascript" src="{{site.theme.link}}/js/chocolat.js"></script>
+    <link rel="stylesheet" href="{{site.theme.link}}/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+{% endblock %}
+
 {% block content %}
     <div class="container">
         <h2>{{ post.title }}</h2>
         <p>{{ post.content }}</p>
         <div class="row">
             {% set count = 0 %}
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-6 chocolat-parent" data-chocolat-title="set title">
             {% for image in post.get_field('gallery') %}
                 {% if count % 2 == 0 %}
-                    <div >
+                    <a class="chocolat-image" href="{{TimberImage(image).src}}" title="{{TimberImage(image).caption}}">
                         <img class="masonry" src="{{TimberImage(image).src}}" alt="{{TimberImage(image).alt}}" />
-                    </div>
+                    </a>
                 {% endif %}
                 {% set count = count + 1 %}
             {% endfor %}
             </div>
             {% set count = 0 %}
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-6 chocolat-parent" data-chocolat-title="set title">
             {% for image in post.get_field('gallery') %}
                 {% if count % 2 == 1 %}
-                    <div>
+                    <a class="chocolat-image" href="{{TimberImage(image).src}}" title="{{TimberImage(image).caption}}">
                         <img class="masonry" src="{{TimberImage(image).src}}" alt="{{TimberImage(image).alt}}" />
-                    </div>
+                    </a>
                 {% endif %}
                 {% set count = count + 1 %}
             {% endfor %}
@@ -30,3 +35,11 @@
         </div>
     </div>
 {% endblock content %}
+
+{% block end %}
+    <script>
+        $(document).ready(function(){
+            $('.chocolat-parent').Chocolat();
+        });
+    </script>
+{% endblock %}
