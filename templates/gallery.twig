@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="container">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <div class="row">
+            {% set count = 0 %}
+            <div class="col-xs-12 col-md-6">
+            {% for image in post.get_field('gallery') %}
+                {% if count % 2 == 0 %}
+                    <div >
+                        <img class="masonry" src="{{TimberImage(image).src}}" alt="{{TimberImage(image).alt}}" />
+                    </div>
+                {% endif %}
+                {% set count = count + 1 %}
+            {% endfor %}
+            </div>
+            {% set count = 0 %}
+            <div class="col-xs-12 col-md-6">
+            {% for image in post.get_field('gallery') %}
+                {% if count % 2 == 1 %}
+                    <div>
+                        <img class="masonry" src="{{TimberImage(image).src}}" alt="{{TimberImage(image).alt}}" />
+                    </div>
+                {% endif %}
+                {% set count = count + 1 %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
