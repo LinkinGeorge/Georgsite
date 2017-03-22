@@ -1,6 +1,7 @@
 <?php
 /**
  * Template file for Locations
+ * Template Name: Locations
  */
 
 $context = Timber::get_context();
