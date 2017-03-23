@@ -1,13 +1,16 @@
 {% if menu %}
 	<nav class="navbar" role="navigation">
-		<div class="container">
+		<div class="container nav-container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+					<div id="nav-icon">
+  						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 				</button>
 				<a class="navbar-brand" href="{{site.url}}">
-					<p>Georgsite</p>
+					<img id="logo" src="{{ site.theme.link }}/images/logo-black.png" alt="Georgsite Logo">
 				</a>
 			</div>
 
@@ -15,7 +18,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					{% for item in menu %}
 						<li class="{{item.classes | join(' ')}}">
-							<a href="{{item.get_link}}">{{item.title}}</a>
+							<a class="hvr-underline-from-left" href="{{item.get_link}}">{{item.title}}</a>
 						</li>
 					{% endfor %}
 				</ul>
@@ -23,3 +26,13 @@
 		</div>
 	</nav>
 {% endif %}
+
+{% block end %}
+	<script>
+		$(document).ready(function(){
+			$('#nav-icon').click(function(){
+				$(this).toggleClass('open');
+			});
+		});
+	</script>
+{% endblock %}
