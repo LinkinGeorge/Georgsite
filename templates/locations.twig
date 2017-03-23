@@ -9,7 +9,7 @@
 {% block content %}
     {% if post.get_children %}
         <section id="grid" class="grid clearfix">
-            {% for child in post.get_children %}
+            {% for child in post.get_children(['page']) %}
                 <a href="{{ child.link }}" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                     <figure>
                         <img src="{{ child.thumbnail.src }}" />
