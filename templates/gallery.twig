@@ -9,29 +9,14 @@
     <div class="container">
         <h2>{{ post.title }}</h2>
         <p>{{ post.content }}</p>
-        <div class="row">
-            {% set count = 0 %}
-            <div class="col-xs-12 col-md-6 chocolat-parent" data-chocolat-title="set title">
+        <div class="masonry chocolat-parent">
             {% for image in post.get_field('gallery') %}
-                {% if count % 2 == 0 %}
+                <div class="item" data-chocolat-title="{{TimberImage(image).caption}}">
                     <a class="chocolat-image" href="{{TimberImage(image).src}}" title="{{TimberImage(image).caption}}">
-                        <img class="masonry" src="{{TimberImage(image).src}}" alt="{{TimberImage(image).alt}}" />
+                        <img src="{{TimberImage(image).src}}" alt="{{TimberImage(image).alt}}" />
                     </a>
-                {% endif %}
-                {% set count = count + 1 %}
+                </div>
             {% endfor %}
-            </div>
-            {% set count = 0 %}
-            <div class="col-xs-12 col-md-6 chocolat-parent" data-chocolat-title="set title">
-            {% for image in post.get_field('gallery') %}
-                {% if count % 2 == 1 %}
-                    <a class="chocolat-image" href="{{TimberImage(image).src}}" title="{{TimberImage(image).caption}}">
-                        <img class="masonry" src="{{TimberImage(image).src}}" alt="{{TimberImage(image).alt}}" />
-                    </a>
-                {% endif %}
-                {% set count = count + 1 %}
-            {% endfor %}
-            </div>
         </div>
     </div>
 {% endblock content %}
