@@ -7,6 +7,7 @@
 {% endblock %}
 
 	<body class="{{body_class}} fix-top-margin" data-template="base.twig">
+		{% include "includes/svg.twig" %}
 		<header class="header" >
 			{% block header %}
 					{% include "menu.twig" with {'menu': menu.get_items} %}

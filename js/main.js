@@ -20,4 +20,8 @@ $(document).ready(function(){
         }
     })
 
+    $('.back').click(function () { 
+        $('.icon-chevron-left').addClass('fadeOutLeft')
+     })
+
 });

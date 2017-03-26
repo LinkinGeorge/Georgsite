@@ -1,10 +1,11 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    <div class="container">
-        <h2 class="loc-title">{{ post.title }}</h2>  
-    </div>
+    {% if post.parent %}
+        <a class="back" href="{{ post.parent.link }}"><svg class="icon icon-chevron-left animated"><use xlink:href="#icon-chevron-left"></use></svg></a>
+    {% endif %}
     <div class="container-fluid loc-container">
+        <h2 class="loc-title">{{ post.title }}</h2>  
         {% if post.get_children(['page']) %}
         <div class="locations">
             {% for child in post.get_children(['page']) %}
