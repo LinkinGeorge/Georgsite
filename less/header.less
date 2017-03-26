@@ -6,7 +6,13 @@
 }
 
 .gd {
-    float: left !important;;
+    position: absolute !important;
+    float: none !important;
+    left: 80px !important;
+
+    .hidden {
+        display: none !important;
+    }
 
     @media only screen and (max-width: 767px) {
         display: none !important;
@@ -36,7 +42,7 @@
 
     @media only screen and (max-width: 767px) {
         float: right;
-        width: 40%;
+        width: 75%;
     }
 
     li {
