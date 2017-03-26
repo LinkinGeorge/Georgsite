@@ -19,7 +19,37 @@
     }
 }
 
+/* Active links */
+
+.current-menu-item, .current_page_item, .current-page-ancestor {
+    a {
+        color: @hover-color !important;
+    }
+}
+
 /* Style navigation links */
+
+.transparent {
+    background: transparent !important;
+    @media only screen and (min-width: 768px) {
+        .nav {
+            background: transparent !important;
+
+            a {
+                color: white !important;
+
+                &:hover {
+                    color: white !important;
+                }
+            }
+
+            .gd a {
+                color: black !important;
+            }
+        }
+    }
+    
+}
 
 .navbar {
     height: 80px;
@@ -31,7 +61,6 @@
 
         ul {
             height: 100%;
-            background: white;
         }
     }
 }
@@ -77,14 +106,6 @@
                 font-size: 32px;
             }
         }
-    }
-}
-
-/* Active links */
-
-.current-menu-item, .current_page_item, .current-page-ancestor {
-    a {
-        color: @hover-color !important;
     }
 }
 

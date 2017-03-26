@@ -8,9 +8,12 @@
 
 	<body class="{{body_class}} fix-top-margin" data-template="base.twig">
 		{% include "includes/svg.twig" %}
-		<header class="header" >
+		<header class="header">
+			{% block nav %}
+				<nav class="navbar navbar-fixed-top" role="navigation">
+			{% endblock %}
 			{% block header %}
-					{% include "menu.twig" with {'menu': menu.get_items} %}
+				{% include "menu.twig" with {'menu': menu.get_items} %}
 			{% endblock %}
 		</header>
 

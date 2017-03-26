@@ -1,7 +1,11 @@
 {% extends "base.twig" %}
 
+{% block nav %}
+    <nav class="navbar navbar-fixed-top transparent " role="navigation">
+{% endblock %}
+
 {% block content %}
-    {% for image in post.get_field('gallery') %}
-        <img src="{{ TimberImage(image).src }}">
-    {% endfor %}
+    <div class="home-wrapper">
+        <img class="fullscreen" src="{{ post.thumbnail.src }}" alt="{{post.thumbnail.alt}}">
+    </div>
 {% endblock content %}

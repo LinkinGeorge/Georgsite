@@ -1,38 +1,36 @@
-{% if menu %}
-	<nav class="navbar navbar-fixed-top" role="navigation">
-		<div class="container nav-container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	<div class="container nav-container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+			 aria-expanded="false">
 					<div id="nav-icon">
   						<span></span>
 						<span></span>
 						<span></span>
 					</div>
 				</button>
-			</div>
-
-			<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li class="gd">
-						<a href="{{site.url}}">G<span id="georg" class="animated">eorg </span>D<span id="donner" class="animated">onner</span></a>
-					</li>
-					{% for item in menu %}
-						<li class="{{item.classes | join(' ')}}">
-							<a class="hvr-underline-from-left" href="{{item.get_link}}">{{item.title}}</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</div>
 		</div>
-	</nav>
-{% endif %}
+
+		<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="gd">
+					<a href="{{site.url}}">G<span id="georg" class="animated">eorg </span>D<span id="donner" class="animated">onner</span></a>
+				</li>
+				{% for item in menu %}
+				<li class="{{item.classes | join(' ')}}">
+					<a class="hvr-underline-from-left" href="{{item.get_link}}">{{item.title}}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</nav>
 
 {% block end %}
-	<script>
-		$(document).ready(function(){
-			$('#nav-icon').click(function(){
-				$(this).toggleClass('open');
-			});
+<script>
+	$(document).ready(function () {
+		$('#nav-icon').click(function () {
+			$(this).toggleClass('open');
 		});
-	</script>
+	});
+</script>
 {% endblock %}
