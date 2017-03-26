@@ -9,13 +9,13 @@
 						<span></span>
 					</div>
 				</button>
-				<a class="navbar-brand" href="{{site.url}}">
-					<img id="logo" src="{{ site.theme.link }}/images/logo-black.png" alt="Georgsite Logo">
-				</a>
 			</div>
 
 			<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav">
+					<li class="gd">
+						<a href="{{site.url}}">Georg Donner</a>
+					</li>
 					{% for item in menu %}
 						<li class="{{item.classes | join(' ')}}">
 							<a class="hvr-underline-from-left" href="{{item.get_link}}">{{item.title}}</a>

@@ -1,19 +1,16 @@
-@text-color: black;
-@hover-color: #aa1111;
+@text-color: #444;
+@hover-color: black;
 
 .fix-top-margin {
     margin-top: 80px;
 }
 
-/* Style logo */
+.gd {
+    float: left !important;;
 
-.navbar-brand {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#logo {
-    height: 40px;
+    @media only screen and (max-width: 767px) {
+        display: none !important;
+    }
 }
 
 /* Style navigation links */
@@ -22,29 +19,45 @@
     height: 80px;
     background: white;
     z-index: 9999;
+
+    .collapse.in {
+        max-height: none;
+
+        ul {
+            height: 100%;
+            background: white;
+        }
+    }
 }
 
 .nav {
     background: white;
+    width: 100%;
+
+    @media only screen and (max-width: 767px) {
+        float: right;
+        width: 40%;
+    }
 
     li {
         text-align: center;
         z-index: 100;
+        float: right;
 
-        &:first-child {
-            @media only screen and (max-width: 767px) {
-                margin-top: -25px;
-            }
+        @media only screen and (max-width: 767px) {
+            display: block;
+            text-align: left;
+            float: none;
         }
 
         a {
-            padding: 5px 0 5px 0;
+            padding: 1px 0 1px 0;
             margin: 25px;
             color: @text-color;
-            font-size: 21px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 300;
             letter-spacing: 2px;
-            text-transform: uppercase;
+            text-transform: lowercase;
 
             &:hover {
                 background: none;
@@ -54,7 +67,8 @@
             @media only screen and (max-width: 767px) {
                 padding-top: 40px;
                 padding-bottom: 40px;
-                font-size: 28px;
+                padding: 35px 0 35px 10px;
+                font-size: 32px;
             }
         }
     }
@@ -93,10 +107,10 @@
     span {
         display: block;
         position: absolute;
-        height: 6px;
+        height: 2px;
         width: 100%;
         background: black;
-        border-radius: 6px;
+        border-radius: 2px;
         opacity: 1;
         left: 0;
         -webkit-transform: rotate(0deg);
