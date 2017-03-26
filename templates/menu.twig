@@ -15,11 +15,13 @@
 				<li class="gd">
 					<a href="{{site.url}}">G<span id="georg" class="animated">eorg </span>D<span id="donner" class="animated">onner</span></a>
 				</li>
-				{% for item in menu %}
-				<li class="{{item.classes | join(' ')}}">
-					<a class="hvr-underline-from-left" href="{{item.get_link}}">{{item.title}}</a>
-				</li>
-				{% endfor %}
+				<div class="nav-items">
+					{% for item in menu %}
+					<li class="{{item.classes | join(' ')}}">
+						<a class="hvr-underline-from-left" href="{{item.get_link}}">{{item.title}}</a>
+					</li>
+					{% endfor %}
+				</div>
 			</ul>
 		</div>
 	</div>

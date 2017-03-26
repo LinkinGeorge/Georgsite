@@ -74,10 +74,14 @@
         width: 75%;
     }
 
+    .nav-items {
+        float: right;
+    }
+
     li {
         text-align: center;
         z-index: 100;
-        float: right;
+        display: inline-block;
 
         @media only screen and (max-width: 767px) {
             display: block;
@@ -97,6 +101,7 @@
             &:hover {
                 background: none;
                 color: @hover-color;
+                text-decoration: none;
             }
 
             @media only screen and (max-width: 767px) {
