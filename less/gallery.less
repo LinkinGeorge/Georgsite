@@ -11,9 +11,13 @@
 /* Masonry */
 
 .masonry {
-    column-count: 2;
+    column-count: 3;
     column-gap: 1em;
     margin: 0 auto;
+
+    @media only screen and (max-width: 1080px) {
+        column-count: 2;
+    }
 
     @media only screen and (max-width: 767px) {
         column-count: 1;
@@ -23,7 +27,7 @@
 .item {
     display: inline-block;
     background: #fff;
-    margin: 0 0 1.5em;
+    margin: 0 0 1em;
     width: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
