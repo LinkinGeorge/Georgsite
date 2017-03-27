@@ -58,6 +58,7 @@
 
     .collapse.in {
         max-height: none;
+        box-shadow: none;
 
         ul {
             height: 100%;
@@ -76,6 +77,10 @@
 
     .nav-items {
         float: right;
+
+        @media only screen and (max-width: 767px) {
+            float: none;
+        }
     }
 
     li {
@@ -105,9 +110,7 @@
             }
 
             @media only screen and (max-width: 767px) {
-                padding-top: 40px;
-                padding-bottom: 40px;
-                padding: 35px 0 35px 10px;
+                padding: 10px 0 10px 30px;
                 font-size: 32px;
             }
         }
