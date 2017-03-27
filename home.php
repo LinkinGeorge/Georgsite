@@ -9,4 +9,4 @@ if (isset($post->hero_image) && strlen($post->hero_image)){
 }
 $context = Timber::get_context();
 $context[ 'post' ] = $post;
-Timber::render( 'home.twig', $context );
+Timber::render( 'sessions.twig', $context );
