@@ -5,7 +5,16 @@
 {% endblock %}
 
 {% block content %}
-    <div class="home-wrapper">
-        <img class="fullscreen" src="{{ post.thumbnail.src }}" alt="{{post.thumbnail.alt}}">
+    <div class="home-content">
+        <div class="home-head">
+            <img class="img-circle" src="{{ TimberImage(post.get_field('avatar')).src }}" alt="Profile Avatar">
+            <h2>{{ post.get_field('headline') }}</h2>
+        </div>
+        <div class="subtext">{{ post.get_field('subtext') }}</div>
     </div>
+    <img class="fullscreen" src="{{ post.thumbnail.src }}" alt="{{post.thumbnail.alt}}">
 {% endblock content %}
+
+{% block footer %}
+    
+{% endblock footer %}
