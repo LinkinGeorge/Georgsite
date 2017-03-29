@@ -383,7 +383,8 @@
             }).appendTo(this.elems.top);
 
             this.elems.fullscreen = $('<span/>', {
-                'class' : 'chocolat-fullscreen'
+                'class' : 'chocolat-fullscreen',
+                'title' : 'Vollbild'
             }).appendTo(this.elems.bottom);
 
             this.elems.description = $('<span/>', {
