@@ -51,11 +51,12 @@
         max-width: 100%;
         height: auto;
         display: block;
-        -webkit-transition: all 1s ease; /* Safari and Chrome */
-        -moz-transition: all 1s ease; /* Firefox */
-        -ms-transition: all 1s ease; /* IE 9 */
-        -o-transition: all 1s ease; /* Opera */
-        transition: all 1s ease;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: all 500ms ease; /* Safari and Chrome */
+        -moz-transition: all 500ms ease; /* Firefox */
+        -ms-transition: all 500ms ease; /* IE 9 */
+        -o-transition: all 500ms ease; /* Opera */
+        transition: all 500ms ease;
 
         &:hover {
             -webkit-transform:scale(1.1); /* Safari and Chrome */
