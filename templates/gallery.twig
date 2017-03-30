@@ -13,8 +13,8 @@
         <div class="masonry chocolat-parent">
             {% for image in post.get_field('gallery') %}
                 <div class="item" data-chocolat-title="{{TimberImage(image).caption}}">
-                    <a class="chocolat-image" href="{{TimberImage(image).src}}" title="{{TimberImage(image).caption}}">
-                        <img src="{{TimberImage(image).src}}" alt="{{TimberImage(image).alt}}" />
+                    <a class="chocolat-image" href="{{TimberImage(image).src}}">
+                        <img src="{{TimberImage(image).src('gallery-thumb')}}" />
                     </a>
                 </div>
             {% endfor %}
