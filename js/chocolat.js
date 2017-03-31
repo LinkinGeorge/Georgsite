@@ -595,18 +595,24 @@
         },
 
         zoomIn : function (e) {
-            this.settings.initialZoomState = this.settings.imageSize;
-            this.settings.imageSize = 'native';
+            if ($('.chocolat-parent').css('column-count')>1) {
+                //is not mobile
+                this.settings.initialZoomState = this.settings.imageSize;
+                this.settings.imageSize = 'native';
 
-            var event = $.Event('mousemove');
-            event.pageX = e.pageX;
-            event.pageY = e.pageY;
-            event.duration = this.settings.duration;
-            this.elems.wrapper.trigger(event);
+                var event = $.Event('mousemove');
+                event.pageX = e.pageX;
+                event.pageY = e.pageY;
+                event.duration = this.settings.duration;
+                this.elems.wrapper.trigger(event);
 
-            this.elems.domContainer.addClass('chocolat-zoomed');
-            var fitting = this.fit(this.settings.currentImage, this.elems.wrapper);
-            return this.center(fitting.width, fitting.height, fitting.left, fitting.top, this.settings.duration);
+                this.elems.domContainer.addClass('chocolat-zoomed');
+                var fitting = this.fit(this.settings.currentImage, this.elems.wrapper);
+                return this.center(fitting.width, fitting.height, fitting.left, fitting.top, this.settings.duration);
+            }
+            else {
+                return;
+            }
         },
 
         zoomOut : function (e, duration) {
