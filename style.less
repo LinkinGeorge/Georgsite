@@ -25,10 +25,16 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
+    font-family: 'object-fit: cover;';
     z-index: -1;
+
+    @media only screen and (max-width: 767px) {
+        object-fit: none;
+        object-position: 80% 50%;
+    }
 }
 
 .home-content {
@@ -40,17 +46,9 @@ body {
     color: white;
 
     .home-head {
-        height: 200px;
-
-        img {
-            height: 200px;
-            margin-top: -36px;
-            margin-right: 40px;
-        }
         
         h2 {
             display: inline-block;
-            line-height: 200px;
             margin: 0;
             font-size: 64px;
             font-weight: 200;
@@ -64,13 +62,20 @@ body {
                 font-size: 32px;
                 line-height: 32px;
                 margin-top: 10px;
+                margin-bottom: 200px;
             }
         }
     }
 
     .subtext {
         margin-top: 20px;
-        padding-left: 20px;
+
+        @media only screen and (max-width: 767px) {
+            position: absolute;
+            top: 50px;
+            margin-top: 175px;
+            padding-bottom: 20px;
+        }
 
         p {
             font-size: 32px;

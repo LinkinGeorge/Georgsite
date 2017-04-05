@@ -1,18 +1,20 @@
 {% extends "base.twig" %}
 
 {% block nav %}
-    <nav class="navbar navbar-fixed-top transparent " role="navigation">
+    <nav class="navbar navbar-fixed-top transparent home-nav" role="navigation">
 {% endblock %}
 
 {% block content %}
     <div class="home-content">
         <div class="home-head">
-            <img class="img-circle" src="{{ TimberImage(post.get_field('avatar')).src }}" alt="Profile Avatar">
             <h2>{{ post.get_field('headline') }}</h2>
+            <div class="subtext">{{ post.get_field('subtext') }}</div>
         </div>
-        <div class="subtext">{{ post.get_field('subtext') }}</div>
     </div>
     <img class="fullscreen" src="{{ post.thumbnail.src }}" alt="{{post.thumbnail.alt}}">
+    <script>
+        $(function () { objectFitImages() });
+    </script>
 {% endblock content %}
 
 {% block footer %}
