@@ -1,0 +1,33 @@
+{
+  "name": "georgsite",
+  "version": "1.0.0",
+  "description": "georgs photography website",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinkinGeorge/Georgsite.git"
+  },
+  "keywords": [
+    "photography"
+  ],
+  "author": "Georg Donner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LinkinGeorge/Georgsite/issues"
+  },
+  "homepage": "https://github.com/LinkinGeorge/Georgsite#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2"
+  }
+}

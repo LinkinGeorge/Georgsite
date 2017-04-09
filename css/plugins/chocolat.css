@@ -111,7 +111,7 @@
     left: 0;
     right: 0;
     line-height:40px;
-    height:40px;
+    height:auto;
     font-size:12px;
     z-index: 17;
     padding-left: 15px;
@@ -121,6 +121,7 @@
     margin-top: 10px;
     color: black;
 }
+
 .chocolat-wrapper .chocolat-set-title{
     display: inline-block;
     padding-right: 15px;
@@ -168,6 +169,34 @@ body.chocolat-open>.chocolat-content{
 }
 .chocolat-in-container{
     position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+    .chocolat-wrapper .chocolat-bottom{
+        height: auto;
+        line-height: 20px;
+        background: rgba(0, 0, 0, 0.2);
+        
+    }
+    .chocolat-wrapper .chocolat-description{
+        text-align: left;
+        width: 85%;
+        padding-top: 5px; 
+        padding-bottom: 5px; 
+    }
+    .chocolat-wrapper .chocolat-pagination{
+        padding: 0;
+        margin: 0;
+        margin-right: 5px;
+        margin-left: 5px;
+        width: 10%;
+        text-align: center;
+    }
+    .chocolat-wrapper .chocolat-fullscreen{
+        margin-right: 5px;
+        margin-left: 5px;
+        width: 10%;
+    }
 }
 
 /* uncomment to hide controls when zoomed-in*/
