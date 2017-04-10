@@ -1,10 +1,5 @@
 {% extends "base.twig" %}
 
-{% block head %}
-    <script type="text/javascript" src="{{site.theme.link}}/js/chocolat.js"></script>
-    <link rel="stylesheet" href="{{site.theme.link}}/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
-{% endblock %}
-
 {% block content %}
     <a class="back" href="{{ post.parent.link }}"><svg class="icon icon-chevron-left animated"><use xlink:href="#icon-chevron-left"></use></svg></a>
     <div class="container-fluid loc-container">
