@@ -16,9 +16,25 @@
         left: 0;
 
         .locations {
+            @loc-hover: #111133;
+
             list-style-type: none;
             margin: 0;
             padding: 0;
+
+            .tooltip {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                line-height: 2;
+            }
+
+            .tooltip-inner {
+                background-color: @loc-hover;
+            }
+
+            .tooltip-arrow {
+                border-top-color: @loc-hover;
+            }
 
             .location a {
                 position: absolute;
@@ -29,6 +45,11 @@
                 height: 1em;
                 background-color: #12aaeb;
                 border-radius: 50%;
+                transition: .5s ease-in-out;
+
+                &:hover {
+                    background-color: @loc-hover;
+                }
             }
 
             .berlin {
@@ -55,7 +76,7 @@
                 left: 2%;
                 top: 60%;
             }
-            .westofengland {
+            .west-of-england {
                 left: 24%;
                 top: 24%;
             }
