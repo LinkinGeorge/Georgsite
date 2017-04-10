@@ -182,7 +182,8 @@ body.chocolat-open>.chocolat-content{
         text-align: left;
         width: 85%;
         padding-top: 5px; 
-        padding-bottom: 5px; 
+        padding-bottom: 5px;
+        min-height: 50px;
     }
     .chocolat-wrapper .chocolat-pagination{
         padding: 0;

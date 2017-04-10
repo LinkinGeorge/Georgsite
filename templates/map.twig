@@ -3,7 +3,18 @@
 {% block content %}
     <div class="map-container">
         <div class="map">
-            
+            <ul class="locations">
+                <li class="location"><a class="berlin" href="#" title="Berlin"></a></li>
+                <li class="location"><a class="heinrichsfelde" href="#" title="Heinrichsfelde"></a></li>
+                <li class="location"><a class="ostsee" href="#" title="Ostsee"></a></li>
+                <li class="location"><a class="sachsen" href="#" title="Sachsen"></a></li>
+                <li class="location"><a class="westofengland" href="#" title="West of England"></a></li>
+                <li class="location"><a class="kampanien" href="#" title="Kampanien"></a></li>
+                <li class="location"><a class="teneriffa" href="#" title="Teneriffa"></a></li>
+            </ul>
+            {% for location in locations.get_children(['page']) %}
+                <p>{{ location.title }}</p>
+            {% endfor %}
         </div>
     </div>
 {% endblock content %}
