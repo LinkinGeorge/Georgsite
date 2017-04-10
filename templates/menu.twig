@@ -17,7 +17,7 @@
 				</li>
 				<div class="nav-items">
 					{% for item in menu %}
-					<li class="{{item.classes | join(' ')}}">
+					<li id="{{item.title|lower}}" class="{{item.classes | join(' ')}}">
 						<a class="hvr-underline-from-left" href="{{item.get_link}}">{{item.title}}</a>
 					</li>
 					{% endfor %}
