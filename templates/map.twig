@@ -10,12 +10,9 @@
 
 {% block content %}
     <div class="map">
-        <img class="fullscreen-map" src="{{site.theme.link}}/images/europe3.svg" alt="Europe Map">
-        <ul class="locations">
-        {% for location in locations.get_children(['page']) %}
-            <li class="location"><a class="{{location.post_name|lower}}" href="{{location.link}}" data-toggle="tooltip" data-placement="top" title="{{location.title}}"></a></li>
-        {% endfor %}
-        </ul>
+        <object class="fullscreen-map" type="image/svg+xml" data="{{site.theme.link}}/images/europe7.svg">
+            Your browser does not support SVG
+        </object>
     </div>
     <script>
         $(document).ready(function(){
