@@ -5,8 +5,9 @@
 	{% endblock %}
 	</head>
 {% endblock %}
-
-	<body class="{{body_class}} fix-top-margin" data-template="base.twig">
+	{% block body %}
+		<body class="{{body_class}} fix-top-margin" data-template="base.twig">
+	{% endblock %}
 		{% include "includes/svg.twig" %}
 		<header class="header">
 			{% block nav %}
