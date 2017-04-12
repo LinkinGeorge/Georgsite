@@ -2,12 +2,7 @@
 
 {% block content %}
     {% if post.parent %}
-        <a class="back" onclick="goBack()"><svg class="icon icon-chevron-left animated"><use xlink:href="#icon-chevron-left"></use></svg></a>
-        <script>
-            function goBack() {
-                window.history.back();
-            }
-        </script>
+        <a class="back" href="{{ post.parent.link }}"><svg class="icon icon-chevron-left animated"><use xlink:href="#icon-chevron-left"></use></svg></a>
     {% endif %}
     <div class="container-fluid loc-container">
         <h2 class="loc-title">{{ post.title }}</h2>  
