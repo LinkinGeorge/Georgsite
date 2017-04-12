@@ -9,9 +9,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="fullscreen-map">
-        {% include "includes/europe.twig" %}
-    </div>
+    {% include "includes/europe.twig" %}
     <script>
         $(document).ready(function(){
             $( "svg a" ).tooltip({container:'body'})
