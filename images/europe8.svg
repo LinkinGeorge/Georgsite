@@ -25,17 +25,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
      id="namedview94"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="0.70710675"
-     inkscape:cx="356.07229"
-     inkscape:cy="902.84558"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:zoom="3.9999998"
+     inkscape:cx="763.46088"
+     inkscape:cy="573.84717"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg3157"
      width="1488.19px"
@@ -678,6 +678,25 @@
        sodipodi:cx="36.000004"
        sodipodi:type="arc"
        id="path4600-8"
+       style="opacity:1;fill:#389bf1;fill-opacity:1;stroke-width:2.33642817" />
+  </a>
+  <a
+     id="a4717-5"
+     xlink:href="http://www.georgdonner.de/locations/boehmische-schweiz"
+     xlink:type=""
+     xlink:title="Böhmische Schweiz"
+     transform="translate(28.999977,83.250004)"
+     target="_top">
+    <path
+       d="m 783.94674,401.13016 a 13.580492,13.580492 0 0 1 0.92039,-19.18103 13.580492,13.580492 0 0 1 19.18128,0.91517 13.580492,13.580492 0 0 1 -0.90994,19.18152 13.580492,13.580492 0 0 1 -19.18177,-0.9047 l 10.04336,-9.14115 z"
+       sodipodi:end="2.4031882"
+       sodipodi:start="2.4042783"
+       sodipodi:ry="13.580492"
+       sodipodi:rx="13.580492"
+       sodipodi:cy="391.99997"
+       sodipodi:cx="794.00006"
+       sodipodi:type="arc"
+       id="path4600-3-9"
        style="opacity:1;fill:#389bf1;fill-opacity:1;stroke-width:2.33642817" />
   </a>
 </svg>
